@@ -60,13 +60,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     setState(() {});
   }
 
-  // @override
-  // void initState() {
-  //   getData();
-  //
-  //   // TODO: implement initState
-  //   super.initState();
-  // }
+
 
   @override
   void didChangeDependencies() {
