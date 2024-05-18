@@ -30,7 +30,9 @@ class _TopCousesScreenState extends State<TopCousesScreen> {
 
 
       ),
-      body: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      body: GridView.builder(
+        itemCount: topCourseData.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           childAspectRatio: 0.9,
 
           crossAxisCount: 2), itemBuilder:
