@@ -8,7 +8,7 @@ var width;
 
 
 void main() {
-  runApp(ProviderScope(child: const MyApp()));
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {
@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
         textTheme: GoogleFonts.montserratTextTheme()
       ),
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

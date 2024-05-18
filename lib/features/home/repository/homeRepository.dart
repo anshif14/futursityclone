@@ -13,7 +13,7 @@ HomeRepository();
 
 
 getCategory() async {
-  final categoryUrlString = 'https://futursity.com/course/api/categories';
+  const categoryUrlString = 'https://futursity.com/course/api/categories';
   Uri categoryUrl = Uri.parse(categoryUrlString);
 
   http.Response categoryData =await  http.get(categoryUrl);
@@ -29,7 +29,7 @@ getCategory() async {
 }
 
 getTopCourse() async {
-  final courseUrlString = 'https://futursity.com/course/api/top_courses';
+  const courseUrlString = 'https://futursity.com/course/api/top_courses';
   Uri courseUrl = Uri.parse(courseUrlString);
 
   http.Response courseData =await  http.get(courseUrl);
@@ -44,8 +44,6 @@ getTopCourse() async {
 
 }
 
-getData(){
-  print('test');
-}
+
 
 }

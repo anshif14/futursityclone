@@ -24,9 +24,9 @@ class HomeScreen extends ConsumerStatefulWidget {
 class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   List<Color> bgColors=[
-   Color(0xff5c50f8),
-   Color(0xfff85454),
-    Color(0xff2AD0A8),
+   const Color(0xff5c50f8),
+   const Color(0xfff85454),
+    const Color(0xff2AD0A8),
 
 
 
@@ -75,15 +75,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     width = MediaQuery.of(context).size.width;
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        shape:CircleBorder(),
-        child: Icon(
+        shape:const CircleBorder(),
+        child: const Icon(
           Icons.filter_list_outlined,
           color: Colors.white,
         ),
         onPressed: () {
 
         },
-        backgroundColor: Color(0xff243444),
+        backgroundColor: const Color(0xff243444),
       ),
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -91,7 +91,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         surfaceTintColor: Colors.white,
         elevation: 2,
         shadowColor: Colors.grey,
-        leading: Text(''),
+        leading: const Text(''),
         title: GestureDetector(
             onTap: () {
               getData();
@@ -104,13 +104,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Top Course',
                     style: TextStyle(fontWeight: FontWeight.w600, fontSize: 22),
                   ),
@@ -120,7 +120,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           data:topCourseData,
                         ),));
                       },
-                      child: Text(
+                      child: const Text(
                         'All Courses>>',
                         style: TextStyle(
                             color: Colors.blueAccent,
@@ -129,7 +129,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ],
               ),
               SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: List.generate(
@@ -148,7 +148,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                         color: Colors.grey.shade300,
                                         spreadRadius: 0.5,
                                         blurRadius: 5,
-                                        offset: Offset(2, 2))
+                                        offset: const Offset(2, 2))
                                   ]),
                               child: Column(
                                 children: [
@@ -156,7 +156,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                       flex: 3,
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                               topLeft: Radius.circular(12),
                                               topRight: Radius.circular(12)
                                           ),
@@ -188,7 +188,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                     topCourseData[index]
                                                             .price ??
                                                         '',
-                                                    style: TextStyle(
+                                                    style: const TextStyle(
                                                         color: Colors.grey,
                                                         fontSize: 14),
                                                   )
@@ -209,10 +209,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 height: height * 0.05,
               ),
 
-              Row(
+              const Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       "Categories",
                       style:
@@ -224,10 +224,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               // SizedBox(height: height*0.05,),
 
               GridView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: categoryData.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   childAspectRatio: 0.9,
                     crossAxisCount: 2),
                 itemBuilder: (context, index) {
@@ -240,7 +240,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                             flex: 3,
                             child: Container(
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(12),
                                       topRight: Radius.circular(12)
                                   ),
@@ -256,7 +256,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                 width: width,
                                   decoration: BoxDecoration(
                                     color: bgColors[index%bgColors.length],
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                         bottomLeft: Radius.circular(12),
                                         bottomRight: Radius.circular(12)
                                     ),),
@@ -266,7 +266,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                   child: SingleChildScrollView(
                                     child: Column(
                                       children: [
-                                        Text(categoryData[index].name.toString(),style: TextStyle(
+                                        Text(categoryData[index].name.toString(),style: const TextStyle(
                                     color: Colors.white,
                                           fontSize: 13,
                                           fontWeight: FontWeight.w700
@@ -280,7 +280,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                                categoryData[index].numberOfCourses.toString()
                                            } Courses"
 
-                                           ,style: TextStyle(
+                                           ,style: const TextStyle(
                                                                                  color: Colors.white,
                                               fontSize: 12,
                                               fontWeight: FontWeight.w500

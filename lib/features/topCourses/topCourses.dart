@@ -26,13 +26,13 @@ class _TopCousesScreenState extends State<TopCousesScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("All Courses"),
+        title: const Text("All Courses"),
 
 
       ),
       body: GridView.builder(
         itemCount: topCourseData.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           childAspectRatio: 0.9,
 
           crossAxisCount: 2), itemBuilder:
@@ -52,7 +52,7 @@ class _TopCousesScreenState extends State<TopCousesScreen> {
                         color: Colors.grey.shade300,
                         spreadRadius: 0.5,
                         blurRadius: 5,
-                        offset: Offset(2, 2))
+                        offset: const Offset(2, 2))
                   ]),
               child: Column(
                 children: [
@@ -60,7 +60,7 @@ class _TopCousesScreenState extends State<TopCousesScreen> {
                       flex: 3,
                       child: Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(12),
                               topRight: Radius.circular(12)
                           ),
@@ -92,7 +92,7 @@ class _TopCousesScreenState extends State<TopCousesScreen> {
                                     topCourseData[index]
                                         .price ??
                                         '',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         color: Colors.grey,
                                         fontSize: 14),
                                   )
